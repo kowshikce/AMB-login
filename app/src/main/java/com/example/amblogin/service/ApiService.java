@@ -5,8 +5,10 @@ import com.example.amblogin.constant.Constant;
 import com.example.amblogin.models.SignupResp;
 import com.example.amblogin.models.UserLoginRequest;
 import com.example.amblogin.models.UserLoginResposnse;
+import com.example.amblogin.ui.response.model.DriverCommentModel;
 import com.google.gson.Gson;
 
+import java.util.List;
 import java.util.Map;
 
 import retrofit2.Call;
@@ -18,6 +20,7 @@ import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 public class ApiService {
 
@@ -53,9 +56,8 @@ public class ApiService {
         @FormUrlEncoded
         Call<AmbulanceResponseModel> createAMBrequest(@Header("Authorization") String token, @FieldMap Map<String, String> params );
 
-
-
-
+        @GET("/api/request/list")
+        Call<List<DriverCommentModel>> getDrivers(@Header("Authorization")String token, @Query("receverid") String id);
 
     }
 }

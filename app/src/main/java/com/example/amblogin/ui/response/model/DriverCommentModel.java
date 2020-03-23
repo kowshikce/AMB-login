@@ -3,6 +3,8 @@ package com.example.amblogin.ui.response.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class DriverCommentModel {
 
     @SerializedName("pk")
@@ -39,9 +41,9 @@ public class DriverCommentModel {
 
     @SerializedName("recever_user")
     @Expose
-    public ReceverUser[] receverUsers;
+    public List<ReceverUser> receverUsers;
 
-    public DriverCommentModel(String pk, String message, String userlocation, String hospitalocation, String arealocation, String status, String receverid, String senderid, ReceverUser[] receverUsers) {
+    public DriverCommentModel(String pk, String message, String userlocation, String hospitalocation, String arealocation, String status, String receverid, String senderid, List<ReceverUser> receverUsers) {
         this.pk = pk;
         this.message = message;
         this.userlocation = userlocation;
@@ -117,11 +119,11 @@ public class DriverCommentModel {
         this.senderid = senderid;
     }
 
-    public ReceverUser[] getReceverUsers() {
+    public List<ReceverUser> getReceverUsers() {
         return receverUsers;
     }
 
-    public void setReceverUsers(ReceverUser[] receverUsers) {
+    public void setReceverUsers(List<ReceverUser> receverUsers) {
         this.receverUsers = receverUsers;
     }
 }

@@ -37,7 +37,7 @@ public class SharePref {
     }
 
     public int getId() {
-        return sharedPreferences.getInt("userPK", 0);
+        return sharedPreferences.getInt("userPK", 1);
     }
 
     public String getUserEmail() {
