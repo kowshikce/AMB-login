@@ -14,8 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.response.ResponseActivity"></activity>
-        <activity android:name=".UserPostRequest.PostActivity" >
+        <activity android:name=".ui.Message.DriverUserChat"></activity>
+        <activity android:name=".ui.response.ResponseActivity" />
+        <activity android:name=".UserPostRequest.PostActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -31,9 +32,7 @@
             android:configChanges="orientation|screenSize"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            android:windowSoftInputMode="adjustPan|stateHidden">
-
-        </activity>
+            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
         <activity
             android:name=".Main3Activity"
             android:configChanges="orientation|screenSize"
