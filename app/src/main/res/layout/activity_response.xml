@@ -12,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_weight="0.3"
         >
 
         <TextView
@@ -20,19 +19,27 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.7"
             android:id="@+id/request_text_view_id"
+            android:textSize="24sp"
+            android:textColorHint="#000000"
+            android:textColor="@color/cardview_dark_background"
+            android:textStyle="italic"
+            android:fontFamily="@font/gotham"
+            android:paddingLeft="10dp"
+
             >
 
 
         </TextView>
 
         <Button
+            android:layout_marginTop="20dp"
             android:layout_margin="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/buttonshape"
             android:textColorHint="#000000"
             android:textColor="#FFFFFF"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             android:text="Refresh"
             android:padding="10dp"

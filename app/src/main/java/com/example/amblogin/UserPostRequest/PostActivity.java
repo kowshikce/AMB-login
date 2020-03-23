@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.amblogin.R;
 import com.example.amblogin.service.ApiService;
 import com.example.amblogin.ui.SessioManager;
+import com.example.amblogin.ui.common.BaseActivity;
 import com.example.amblogin.ui.response.ResponseActivity;
 import com.example.amblogin.ui.response.ResponseConstant;
 
@@ -24,7 +25,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class PostActivity extends AppCompatActivity {
+public class PostActivity extends BaseActivity {
 
     private EditText where, to;
     private Button button;
@@ -44,6 +45,11 @@ public class PostActivity extends AppCompatActivity {
         sessioManager = SessioManager.newInstance(getApplicationContext());
         Log.i(TAG, "fuck" + sessioManager.getUser().getToken());
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
     }
 
     private View.OnClickListener listener = new View.OnClickListener() {

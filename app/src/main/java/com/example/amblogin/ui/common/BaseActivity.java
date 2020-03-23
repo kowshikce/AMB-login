@@ -18,10 +18,10 @@ public class BaseActivity extends AppCompatActivity {
         sessionManager = SessioManager.newInstance(this);
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
 
+    @Override
+    protected void onStart() {
+        super.onStart();
         verifyLogin();
     }
 

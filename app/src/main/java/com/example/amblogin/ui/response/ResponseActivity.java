@@ -40,9 +40,9 @@ public class ResponseActivity extends AppCompatActivity {
         button = findViewById(R.id.request_button_id);
         button.setOnClickListener(listener);
 
-        textView.append(where);
+        textView.append("From "+ where);
         textView.append("\n");
-        textView.append(to);
+        textView.append("To " + to);
 
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
