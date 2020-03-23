@@ -16,7 +16,11 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".ui.Message.DriverUserChat"></activity>
         <activity android:name=".ui.response.ResponseActivity" />
-        <activity android:name=".UserPostRequest.PostActivity">
+        <activity android:name=".UserPostRequest.PostActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppPost"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
