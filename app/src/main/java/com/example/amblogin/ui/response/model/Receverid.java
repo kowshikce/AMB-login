@@ -1,15 +1,17 @@
 
 package com.example.amblogin.ui.response.model;
 
-import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class DriverCommentModel {
+public class Receverid {
 
-    @SerializedName("pk")
+    @SerializedName("id")
     @Expose
-    private int pk;
+    private int id;
+    @SerializedName("title")
+    @Expose
+    private Object title;
     @SerializedName("message")
     @Expose
     private String message;
@@ -30,17 +32,22 @@ public class DriverCommentModel {
     private int receverid;
     @SerializedName("senderid")
     @Expose
-    private List<Senderid> senderid;
-    @SerializedName("recever_user")
-    @Expose
-    private List<ReceverUser> receverUser = null;
+    private Object senderid;
 
-    public int getPk() {
-        return pk;
+    public int getId() {
+        return id;
     }
 
-    public void setPk(int pk) {
-        this.pk = pk;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Object getTitle() {
+        return title;
+    }
+
+    public void setTitle(Object title) {
+        this.title = title;
     }
 
     public String getMessage() {
@@ -91,19 +98,12 @@ public class DriverCommentModel {
         this.receverid = receverid;
     }
 
-    public List<Senderid> getSenderid() {
+    public Object getSenderid() {
         return senderid;
     }
 
-    public void setSenderid(List<Senderid> senderid) {
+    public void setSenderid(Object senderid) {
         this.senderid = senderid;
     }
 
-    public List<ReceverUser> getReceverUser() {
-        return receverUser;
-    }
-
-    public void setReceverUser(List<ReceverUser> receverUser) {
-        this.receverUser = receverUser;
-    }
 }

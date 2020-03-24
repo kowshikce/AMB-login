@@ -1,12 +1,10 @@
 package com.example.amblogin.service;
 
 import com.example.amblogin.UserPostRequest.AmbulanceResponseModel;
-import com.example.amblogin.constant.Constant;
 import com.example.amblogin.models.SignupResp;
 import com.example.amblogin.models.UserLoginRequest;
 import com.example.amblogin.models.UserLoginResposnse;
 import com.example.amblogin.ui.response.model.DriverCommentModel;
-import com.google.gson.Gson;
 
 import java.util.List;
 import java.util.Map;

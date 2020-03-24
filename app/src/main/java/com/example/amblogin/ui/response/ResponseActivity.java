@@ -6,10 +6,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
-import android.view.animation.DecelerateInterpolator;
 import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.TabHost;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,10 +23,7 @@ import com.example.amblogin.ui.response.model.DriverCommentModel;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
-import fr.castorflex.android.smoothprogressbar.SmoothProgressBar;
-import fr.castorflex.android.smoothprogressbar.SmoothProgressDrawable;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -43,7 +38,6 @@ public class ResponseActivity extends AppCompatActivity {
     private SessioManager sessioManager;
     private ProgressBar progressBar;
     private Handler mHandler;
-
     private static final String TAG = "ResponseActivity";
 
 
@@ -94,8 +88,8 @@ public class ResponseActivity extends AppCompatActivity {
                         if(!response.body().isEmpty()){
                             Log.i(TAG, "successful and not empty");
                             ArrayList<ReponseModel> models = new ArrayList<>();
-                            for(DriverCommentModel m : response.body()){
-                                models.add(new ReponseModel(m.getSenderid(), m.getMessage()));
+                            for(int i = 0; i < response.body().size(); i++){
+                                models.add(new ReponseModel(response.body().get(i).getReceverUser().get(i).getPk()+"a", response.body().get(i).getReceverUser().get(i).getMessage()));
                             }
                             adapter.setData(models);
                         }else{
